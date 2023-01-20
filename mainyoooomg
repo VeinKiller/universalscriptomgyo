@@ -604,6 +604,15 @@ local Toggle = Tab:CreateToggle({
 	end,
 })
 
+local Toggle = Tab:CreateToggle({
+	Name = "Real Macro",
+	CurrentValue = false,
+	Flag = "Toggle7",
+	Callback = function()
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/GuizzyisbackV2LOL/Marco/main/Lua%20ObfMac",true))()
+	end,
+})
+
 local Tab = Window:CreateTab("Credits", 4483362458)
 
 local Paragraph = Tab:CreateParagraph({Title = "Owner", Content = "alxpeez#0001"})
