@@ -211,6 +211,21 @@ local Button = Tab:CreateButton({
 	end,
 })
 
+local Button = Tab:CreateButton({
+	Name = "Anti-Stomp",
+	Callback = function()
+	    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(KeyPressed)
+ if KeyPressed == "k" then
+    for L_170_forvar0, L_171_forvar1 in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+        if L_171_forvar1:IsA("BasePart") then
+            L_171_forvar1:Destroy()
+        end
+    end
+    end
+end)
+end,
+})
+
 local Tab = Window:CreateTab("Credits", 4483362458)
 
 local Paragraph = Tab:CreateParagraph({Title = "Owner", Content = "alxpeez#0001"})
