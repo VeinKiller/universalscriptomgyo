@@ -227,28 +227,6 @@ end,
 })
 
 local Button = Tab:CreateButton({
-	Name = "No Jump Cooldown",
-	Callback = function()
-if not game.IsLoaded(game) then 
-    game.Loaded.Wait(game.Loaded);
-end
-
--- variables 
-local IsA = game.IsA;
-local newindex = nil 
-
--- main hook
-newindex = hookmetamethod(game, "__newindex", function(self, Index, Value)
-    if not checkcaller() and IsA(self, "Humanoid") and Index == "JumpPower" then 
-        return
-    end
-    
-    return newindex(self, Index, Value);
-end)
-end,
-})
-
-local Button = Tab:CreateButton({
 	Name = "Anti-Fling",
 	Callback = function()
 local Services = setmetatable({}, {__index = function(Self, Index)
@@ -351,29 +329,6 @@ local localPlayer = game:GetService('Players').LocalPlayer;
                 lol.Parent = game.Workspace.Players
                 game.Players.LocalPlayer.Character:WaitForChild("BodyEffects")
                 game.Players.LocalPlayer.Character.BodyEffects.BreakingParts:Destroy()
-end,
-})
-
-local Button = Tab:CreateButton({
-        Name = "Auto-Clicker",
-	Callback = function()
-	     local time = 0.01 --decrease if too slow increase if too fast
-
-click = false
-m = game.Players.LocalPlayer:GetMouse()
-m.KeyDown:connect(function(key)
-if key == "v" then
-if click == true then click = false
-elseif
-click == false then click = true
-
-while click == true do 
-wait(time)
-mouse1click()
-end
-end
-end
-end)
 end,
 })
 
