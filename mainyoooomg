@@ -3,7 +3,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 
 local Window = Rayfield:CreateWindow({
    Name = "NwokerrHub",
-   LoadingTitle = "Pet Simulator X!",
+   LoadingTitle = "Universal Script!",
    LoadingSubtitle = "by Alxpeez",
    ConfigurationSaving = {
       Enabled = true,
