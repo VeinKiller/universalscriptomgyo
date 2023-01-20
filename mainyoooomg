@@ -595,6 +595,15 @@ chr.RightFoot.Transparency = "1"
 end,
 })
 
+local Toggle = Tab:CreateToggle({
+	Name = "Auto-Arrest",
+	CurrentValue = false,
+	Flag = "Toggle7",
+	Callback = function()
+	    loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Arrest"), true))()
+	end,
+})
+
 local Tab = Window:CreateTab("Credits", 4483362458)
 
 local Paragraph = Tab:CreateParagraph({Title = "Owner", Content = "alxpeez#0001"})
