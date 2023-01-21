@@ -824,44 +824,6 @@ game.Players.LocalPlayer.CharacterAdded:Connect(AnimationPack)
 end,
 })
 
-local Button = Tab:CreateButton({
-	Name = "Trash Talk",
-	Callback = function()
-        local garbage = {
-    "ur garbage";
-    "did you start today?";
-    "my grandma has more skill than you";
-    "L";
-    "you should leave already";
-    "beta male energy";
-    "imagine being you right now";
-    "ez";
-    "no skill";
-    "time to take out the trash";
-    "you're nothing";
-    "thank you for your time";
-    "did you get worse?";
-    "I didn't think being this bad was possible";
-    "why do you even try";
-    "look he's mad";
-    "cry more";
-    "keep crying";
-    "dog water";
-    "lol I win";
-    "no one likes u";
-    "thank you for your time";
-    "darn ;/";
-}
-
-game:GetService("Players").LocalPlayer.Information.Streaks.Changed:Connect(function(val)
-    if val ~= 0 then
-        local args = {[1] = garbage[math.random(1,#garbage)],[2] = "All"}
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-    end
-end)
-	end,
-})
-
 local Tab = Window:CreateTab("Credits", 4483362458)
 
 local Paragraph = Tab:CreateParagraph({Title = "Owner", Content = "alxpeez#0001"})
