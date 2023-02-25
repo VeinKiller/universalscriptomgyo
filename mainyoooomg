@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 
 
 local Window = Rayfield:CreateWindow({
-   Name = "NwokerrHub",
+   Name = "Nwokerr Hub",
    LoadingTitle = "Universal Script!",
    LoadingSubtitle = "by Alxpeez",
    ConfigurationSaving = {
@@ -92,6 +92,15 @@ local Slider = Tab:CreateSlider({
 	Flag = "Slider1",
     Callback = function(k)
 	    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = k
+	end,
+})
+
+local Toggle = Tab:CreateToggle({
+	Name = "Infinite Jump",
+	CurrentValue = false,
+	Flag = "Toggle19",
+	Callback = function()
+		game:GetService("UserInputService").JumpRequest:connect(function() game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):ChangeState("Jumping") end)
 	end,
 })
 
